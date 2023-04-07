@@ -1,4 +1,8 @@
 // Desafio 1 - Crie a função compareTrue
+const compareTrue = (parametro1, parametro2) => {
+  const trueExpresion = (parametro1 === true && parametro2 === true) ? true : false;
+  return trueExpresion;
+};
 
 // Desafio 2 - Crie a função splitSentence
 
