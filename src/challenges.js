@@ -62,12 +62,18 @@ const calcAllAreas = (base, height, form) => {
 // Desafio 7 - Crie a função catAndMouse
 
 const catAndMouse = (mouse, cat1, cat2) => {
+  let status = ''
   if ((Math.abs(cat1)) === (Math.abs(cat2))) {
-    return `os gatos trombam e o rato foge`;
+    status = `os gatos trombam e o rato foge`;
   } else if ((((Math.abs(cat1)) - (Math.abs(mouse))) < ((Math.abs(cat2)) - (Math.abs(mouse))))) {
-    return `cat1`;
-  } return `cat2`;
+    status = 'cat1';
+  } else {
+    status = 'cat2';
+  }
+  return status;
 };
+
+console.log(catAndMouse(-50, 6, 5))
 // Desafio 8 - Crie a função fizzBuzz
 
 const fizzBuzz = (array) => {
