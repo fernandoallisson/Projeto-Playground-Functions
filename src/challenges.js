@@ -60,7 +60,7 @@ const calcAllAreas = (base, height, form) => {
 
 // Desafio 7 - Crie a função catAndMouse
 const catAndMouse = (mouse, cat1, cat2) => {
-  if (((cat1 - mouse)) === ((cat2 - mouse))) {
+  if ((Math.abs(cat1 - mouse)) === (Math.abs(cat2 - mouse))) {
     return `os gatos trombam e o rato foge`;
   } else if ((Math.abs(cat1 - mouse)) < (Math.abs(cat2 - mouse))) {
     return 'cat1';
