@@ -27,15 +27,18 @@ const verifArray = (array) => {
 };
 
 const generatePhoneNumber = (array) => {
-  let validation = verifArray(array); 
+  let validation = verifArray(array);
   if (validation === true) {
     const formated = (`(${array.slice(0, 2).join('')}) ${array.slice(2 , 7).join('')}-${array.slice(7).join('')}`);
-    return formated; 
+    return formated;
+  } else {
+    return validation;
   }
-  return validation
 }
 
 // Desafio 12 -  Crie a função triangleCheck
+
+
 
 // Desafio 13 - Crie a função hydrate
 
