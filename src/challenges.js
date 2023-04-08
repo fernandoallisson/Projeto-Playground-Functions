@@ -42,7 +42,6 @@ const highestCount = (array) => {
 };
 
 // Desafio 6 - Crie as funções calcTriangleArea, calcRectangleArea e calcAllAreas
-
 const calcTriangleArea = (base, height) => {
   return (base * height) / 2;
 };
@@ -60,7 +59,6 @@ const calcAllAreas = (base, height, form) => {
 };
 
 // Desafio 7 - Crie a função catAndMouse
-
 const catAndMouse = (mouse, cat1, cat2) => {
   let status = ''
   if ((Math.abs(cat1)) === (Math.abs(cat2))) {
@@ -74,7 +72,6 @@ const catAndMouse = (mouse, cat1, cat2) => {
 };
 
 // Desafio 8 - Crie a função fizzBuzz
-
 const fizzBuzz = (array) => {
   let newArray = [];
   for (let numero in array) {
@@ -92,7 +89,6 @@ const fizzBuzz = (array) => {
 };
 
 // Desafio 9 - Crie a função encode e a função decode
-
 const encode = (string) => {
   let newString = string.split('') // separando letra por letra para verificação
   let arrayEncode = [];
@@ -133,8 +129,18 @@ const decode = (string) => {
   }
   return arrayEncode.join('');
 };
-// Desafio 10 - Crie a função techList
 
+// Desafio 10 - Crie a função techList
+const techList = (array, string) => {
+  if (array.length === 0) {
+    return array;
+  } let arrayOrg = array.sort();
+  let arrayObj = [];
+  for (let tech in arrayOrg) {
+    arrayObj.push({tech: arrayOrg[tech], name: string});
+  }
+  return arrayObj;
+};
 // Não modifique essas linhas
 module.exports = {
   calcTriangleArea: typeof calcTriangleArea === 'function' ? calcTriangleArea : (() => {}),
