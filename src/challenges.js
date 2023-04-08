@@ -73,7 +73,6 @@ const catAndMouse = (mouse, cat1, cat2) => {
   return status;
 };
 
-console.log(catAndMouse(-50, 6, 5))
 // Desafio 8 - Crie a função fizzBuzz
 
 const fizzBuzz = (array) => {
@@ -94,6 +93,46 @@ const fizzBuzz = (array) => {
 
 // Desafio 9 - Crie a função encode e a função decode
 
+const encode = (string) => {
+  let newString = string.split('') // separando letra por letra para verificação
+  let arrayEncode = [];
+  for (letters in newString){ // 
+    if(newString[letters] === 'a') {
+      arrayEncode.push ('1');
+    } else if(newString[letters] === 'e') {
+      arrayEncode.push ('2');
+    } else if (newString[letters] === 'i') {
+      arrayEncode.push ('3');
+    } else if (newString[letters] === 'o') {
+      arrayEncode.push ('4');
+    } else if (newString[letters] === 'u') {
+      arrayEncode.push ('5');
+    } else {
+      arrayEncode.push(newString[letters]);
+    }
+  }
+  return arrayEncode.join('');
+};
+const decode = (string) => {
+  let newString = string.split('') // separando letra por letra para verificação
+  let arrayEncode = [];
+  for (letters in newString){ // 
+    if(newString[letters] === '1') {
+      arrayEncode.push ('a');
+    } else if(newString[letters] === '2') {
+      arrayEncode.push ('e');
+    } else if (newString[letters] === '3') {
+      arrayEncode.push ('i');
+    } else if (newString[letters] === '4') {
+      arrayEncode.push ('o');
+    } else if (newString[letters] === '5') {
+      arrayEncode.push ('u');
+    } else {
+      arrayEncode.push(newString[letters]);
+    }
+  }
+  return arrayEncode.join('');
+};
 // Desafio 10 - Crie a função techList
 
 // Não modifique essas linhas
