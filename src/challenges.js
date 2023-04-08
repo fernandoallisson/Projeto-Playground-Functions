@@ -70,6 +70,22 @@ const catAndMouse = (mouse, cat1, cat2) => {
 };
 // Desafio 8 - Crie a função fizzBuzz
 
+const fizzBuzz = (array) => {
+  let newArray = [];
+  for (let numero in array) {
+    if (array[numero] % 3 !== 0 && array[numero] % 5 !== 0) {
+      newArray.push('bug!');
+    } else if (array[numero] % 3 === 0 && array[numero] % 5 === 0) {
+      newArray.push('fizzBuzz');
+    } else if (array[numero] % 5 === 0 && array[numero] % 3 !== 0) {
+      newArray.push('buzz');
+    } else if (array[numero] % 3 === 0 && array[numero] % 5 !== 0) {
+      newArray.push('fizz');
+    }
+  }
+  return newArray;
+};
+
 // Desafio 9 - Crie a função encode e a função decode
 
 // Desafio 10 - Crie a função techList
