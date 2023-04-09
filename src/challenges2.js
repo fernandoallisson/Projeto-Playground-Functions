@@ -18,7 +18,7 @@ const verifArray = (array) => {
     }
   });
     for (let numb in counter) {
-      if (counter[numb] > 3) {
+      if (counter[numb] >= 3) {
         verifyNumber = false;
         return 'não é possível gerar um número de telefone com esses valores'
       }
@@ -34,7 +34,7 @@ const generatePhoneNumber = (array) => {
   } else {
     return validation;
   }
-}
+};
 
 // Desafio 12 -  Crie a função triangleCheck
 const triangleCheck = (lineA, lineB, lineC) => {
