@@ -66,13 +66,13 @@ const searchNumber = (string) => {
     onlyNumber += Number((string[letter].replace(/[^0-9]/g,'')))
   }
   return onlyNumber;
-}
+};
 
 const hydrate = (string) => {
   if (searchNumber(string) === 1) {
     return `${searchNumber(string)} copo de água`
   } return `${searchNumber(string)} copos de água`
-}
+};
 
 /* eslint no-undef: 0 */
 
