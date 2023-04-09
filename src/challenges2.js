@@ -60,6 +60,20 @@ const triangleCheck = (lineA, lineB, lineC) => {
 
 // Desafio 13 - Crie a função hydrate
 
+const searchNumber = (string) => {
+  let onlyNumber = 0;
+  for (let letter in string) {
+    onlyNumber += Number((string[letter].replace(/[^0-9]/g,'')))
+  }
+  return onlyNumber;
+}
+
+const hydrate = (string) => {
+  if (searchNumber(string) === 1) {
+    return `${searchNumber(string)} copo de água`
+  } return `${searchNumber(string)} copos de água`
+}
+
 /* eslint no-undef: 0 */
 
 // Não modifique essas linhas
