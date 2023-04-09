@@ -37,15 +37,26 @@ const generatePhoneNumber = (array) => {
 };
 
 // Desafio 12 -  Crie a função triangleCheck
+const firstCondition = (lineA, lineB, lineC) => {
+  const conditionA = ((lineA < (lineB + lineC)) && (lineA > Math.abs(lineB - lineC))) ? true : false;
+  const conditionB = ((lineB < (lineA + lineC)) && (lineB > Math.abs(lineA - lineC))) ? true : false;
+  const conditionC = ((lineC < (lineA + lineB)) && (lineC > Math.abs(lineA - lineB))) ? true : false;
+  const condition1 = (conditionA === true && conditionB === true && conditionC === true) ? true : false
+  return condition1;
+};
+
+const secondCondition = (lineA, lineB, lineC) => {
+  const conditionA = ((lineA < (lineB + lineC))) ? true : false;
+  const conditionB = ((lineB < (lineA + lineC))) ? true : false;
+  const conditionC = ((lineC < (lineA + lineB))) ? true : false;
+  const condition2 = (conditionA === true && conditionB === true && conditionC === true) ? true : false
+  return condition2;
+};
+
 const triangleCheck = (lineA, lineB, lineC) => {
-  let firstCondition = Math.abs((lineA < (lineB + lineC)) && (lineA > (lineB - lineC))) ? true : false;
-  let secondCondition = Math.abs((lineA < (lineB + lineC)) && (lineB < (lineA + lineC)) && (lineC < (lineA + lineB))) ? true : false;
-  if (firstCondition === true || secondCondition === true) {
-    return true; 
-  } else{
-    return false;
-  }
-}
+  const endConditional = (firstCondition(lineA, lineB, lineC) === true || secondCondition(lineA, lineB, lineC) === true) ? true : false;
+  return endConditional;
+}; 
 
 // Desafio 13 - Crie a função hydrate
 
