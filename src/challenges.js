@@ -5,15 +5,13 @@ const compareTrue = (parametro1, parametro2) => {
 };
 
 // Desafio 2 - Crie a função splitSentence
-const splitSentence = (string) => { return string.split(' ')};
+const splitSentence = (string) => { return string.split(' '); };
 
 // Desafio 3 - Crie a função concatName
-const concatName = (array) => {return `${array[array.length - 1]}, ${array[0]}`};
+const concatName = (array) => { return `${array[array.length - 1]}, ${array[0]}`; };
 
 // Desafio 4 - Crie a função footballPoints
-const footballPoints = (wins, ties) => {
-  return (wins * 3) + ties;
-};
+const footballPoints = (wins, ties) => { return (wins * 3) + ties; };
 
 // Desafio 5 - Crie a função highestCount
 const MayorNumber = (array) => {
@@ -21,10 +19,10 @@ const MayorNumber = (array) => {
   for (let i = 0; i < array.length; i += 1) {
     if (array[i] > MayorNumberArray) {
       MayorNumberArray = array[i]
-    }
+    };
   };
   return MayorNumberArray;
-};
+}
 
 const highestCount = (array) => {
   let searchNumber = MayorNumber(array);
@@ -40,7 +38,7 @@ const highestCount = (array) => {
 // Desafio 6 - Crie as funções calcTriangleArea, calcRectangleArea e calcAllAreas
 const calcTriangleArea = (base, height) => {return (base * height) / 2};
 
-const calcRectangleArea = (base, height) => {return base * height};
+const calcRectangleArea = (base, height) => { return base * height; };
 
 const calcAllAreas = (base, height, form) => {
   if (form === 'triângulo') {
