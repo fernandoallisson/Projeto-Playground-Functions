@@ -1,28 +1,28 @@
 // Desafio 1 - Crie a função compareTrue
 const compareTrue = (parametro1, parametro2) => {
-  const trueExpresion = (parametro1 === true && parametro2 === true) ? true : false;
+  const trueExpresion = (parametro1 === true && parametro2 === true);
   return trueExpresion;
 };
 
 // Desafio 2 - Crie a função splitSentence
-const splitSentence = (string) => { return string.split(' '); };
+const splitSentence = (string) => string.split(' ');
 
 // Desafio 3 - Crie a função concatName
-const concatName = (array) => { return `${array[array.length - 1]}, ${array[0]}`; };
+const concatName = (array) => `${array[array.length - 1]}, ${array[0]}`;
 
 // Desafio 4 - Crie a função footballPoints
-const footballPoints = (wins, ties) => { return (wins * 3) + ties; };
+const footballPoints = (wins, ties) => (wins * 3) + ties;
 
 // Desafio 5 - Crie a função highestCount
 const MayorNumber = (array) => {
   let MayorNumberArray = array[0];
   for (let i = 0; i < array.length; i += 1) {
     if (array[i] > MayorNumberArray) {
-      MayorNumberArray = array[i]
-    };
-  };
+      MayorNumberArray = array[i];
+    }
+  }
   return MayorNumberArray;
-}
+};
 
 const highestCount = (array) => {
   let searchNumber = MayorNumber(array);
@@ -36,22 +36,23 @@ const highestCount = (array) => {
 };
 
 // Desafio 6 - Crie as funções calcTriangleArea, calcRectangleArea e calcAllAreas
-const calcTriangleArea = (base, height) => {return (base * height) / 2};
+const calcTriangleArea = (base, height) => (base * height) / 2;
 
-const calcRectangleArea = (base, height) => { return base * height; };
+const calcRectangleArea = (base, height) => base * height;
 
 const calcAllAreas = (base, height, form) => {
   if (form === 'triângulo') {
     return `O valor da área do triângulo é de: ${calcTriangleArea(base, height)}`;
-  } else if (form === 'retângulo') {
+  } if (form === 'retângulo') {
     return `O valor da área do retângulo é de: ${calcRectangleArea(base, height)}`;
-  } return `Não foi possível fazer o cálculo, insira uma forma geométrica válida`;
+  } return 'Não foi possível fazer o cálculo, insira uma forma geométrica válida';
 };
 
 // Desafio 7 - Crie a função catAndMouse
 const catAndMouse = (mouse, cat1, cat2) => {
   let verificacao1 = ((Math.abs(cat1 - mouse)) < (Math.abs(cat2 - mouse))) ? 'cat1' : 'cat2';
-  let verificação = ((Math.abs(cat1 - mouse)) === (Math.abs(cat2 - mouse))) ? `os gatos trombam e o rato foge` : verificacao1;
+  let verificação = ((Math.abs(cat1 - mouse)) === (Math.abs(cat2 - mouse)))
+    ? 'os gatos trombam e o rato foge' : verificacao1;
   return verificação;
 };
 
@@ -76,17 +77,17 @@ const fizzBuzz = (array) => {
 const encode = (string) => {
   let newString = string.split('') // separando letra por letra para verificação
   let arrayEncode = [];
-  for (letters in newString){ // 
-    if(newString[letters] === 'a') {
-      arrayEncode.push ('1');
-    } else if(newString[letters] === 'e') {
-      arrayEncode.push ('2');
+  for (letters in newString) { // 
+    if (newString[letters] === 'a') {
+      arrayEncode.push('1');
+    } else if (newString[letters] === 'e') {
+      arrayEncode.push('2');
     } else if (newString[letters] === 'i') {
-      arrayEncode.push ('3');
+      arrayEncode.push('3');
     } else if (newString[letters] === 'o') {
-      arrayEncode.push ('4');
+      arrayEncode.push('4');
     } else if (newString[letters] === 'u') {
-      arrayEncode.push ('5');
+      arrayEncode.push('5');
     } else {
       arrayEncode.push(newString[letters]);
     }
@@ -96,17 +97,17 @@ const encode = (string) => {
 const decode = (string) => {
   let newString = string.split('') // separando letra por letra para verificação
   let arrayEncode = [];
-  for (letters in newString){ // 
-    if(newString[letters] === '1') {
-      arrayEncode.push ('a');
-    } else if(newString[letters] === '2') {
-      arrayEncode.push ('e');
+  for (letters in newString) { // 
+    if (newString[letters] === '1') {
+      arrayEncode.push('a');
+    } else if (newString[letters] === '2') {
+      arrayEncode.push('e');
     } else if (newString[letters] === '3') {
-      arrayEncode.push ('i');
+      arrayEncode.push('i');
     } else if (newString[letters] === '4') {
-      arrayEncode.push ('o');
+      arrayEncode.push('o');
     } else if (newString[letters] === '5') {
-      arrayEncode.push ('u');
+      arrayEncode.push('u');
     } else {
       arrayEncode.push(newString[letters]);
     }
@@ -121,23 +122,23 @@ const techList = (array, string) => {
   } let arrayOrg = array.sort();
   let arrayObj = [];
   for (let tech in arrayOrg) {
-    arrayObj.push({tech: arrayOrg[tech], name: string});
+    arrayObj.push({ tech: arrayOrg[tech], name: string });
   }
   return arrayObj;
 };
 // Não modifique essas linhas
 module.exports = {
-  calcTriangleArea: typeof calcTriangleArea === 'function' ? calcTriangleArea : (() => {}),
-  calcRectangleArea: typeof calcRectangleArea === 'function' ? calcRectangleArea : (() => {}),
-  calcAllAreas: typeof calcAllAreas === 'function' ? calcAllAreas : (() => {}),
-  catAndMouse: typeof catAndMouse === 'function' ? catAndMouse : (() => {}),
-  compareTrue: typeof compareTrue === 'function' ? compareTrue : (() => {}),
-  concatName: typeof concatName === 'function' ? concatName : (() => {}),
-  decode: typeof decode === 'function' ? decode : (() => {}),
-  encode: typeof encode === 'function' ? encode : (() => {}),
-  fizzBuzz: typeof fizzBuzz === 'function' ? fizzBuzz : (() => {}),
-  footballPoints: typeof footballPoints === 'function' ? footballPoints : (() => {}),
-  highestCount: typeof highestCount === 'function' ? highestCount : (() => {}),
-  splitSentence: typeof splitSentence === 'function' ? splitSentence : (() => {}),
-  techList: typeof techList === 'function' ? techList : (() => {}),
+  calcTriangleArea: typeof calcTriangleArea === 'function' ? calcTriangleArea : (() => { }),
+  calcRectangleArea: typeof calcRectangleArea === 'function' ? calcRectangleArea : (() => { }),
+  calcAllAreas: typeof calcAllAreas === 'function' ? calcAllAreas : (() => { }),
+  catAndMouse: typeof catAndMouse === 'function' ? catAndMouse : (() => { }),
+  compareTrue: typeof compareTrue === 'function' ? compareTrue : (() => { }),
+  concatName: typeof concatName === 'function' ? concatName : (() => { }),
+  decode: typeof decode === 'function' ? decode : (() => { }),
+  encode: typeof encode === 'function' ? encode : (() => { }),
+  fizzBuzz: typeof fizzBuzz === 'function' ? fizzBuzz : (() => { }),
+  footballPoints: typeof footballPoints === 'function' ? footballPoints : (() => { }),
+  highestCount: typeof highestCount === 'function' ? highestCount : (() => { }),
+  splitSentence: typeof splitSentence === 'function' ? splitSentence : (() => { }),
+  techList: typeof techList === 'function' ? techList : (() => { }),
 };
